@@ -1,0 +1,189 @@
+name: "Support Request"
+description: "Request infrastructure access, technical guidance, or engineering support"
+title: "[Support] [Brief description of request]"
+labels: ["support-request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Support Request Template
+        Use this template for all support needs including:
+        - Infrastructure access and environment setup
+        - Technical guidance and consultation
+        - DevOps and engineering support
+        - Architecture and best practice advice
+
+        **Response Time**:
+        - Standard requests: 24-48 hours
+        - Urgent requests: 4 hours
+        - Critical requests: Immediate attention
+
+  - type: textarea
+    id: basic-information
+    attributes:
+      label: "Basic Information"
+      description: "Provide the essential details about your support request"
+      placeholder: |
+        **Support Category:** [Infrastructure/Access | Technical Guidance | Engineering Consultation | DevOps Support | Environment Setup | Other (specify)]
+
+        **Specific Support Type:**
+        [For Infrastructure/Access: GitHub access, environment setup, deployment support, etc.]
+        [For Technical Guidance: Architecture advice, best practices, tool recommendations, etc.]
+        [For Engineering Consultation: Code review, performance optimization, integration help, etc.]
+
+        **Urgency Level:** [Standard (24-48 hours) | High (within 4 hours) | Critical (immediate attention needed)]
+
+        **Primary Technical Area:** [Frontend/UI | Backend/API | Blockchain/Smart contracts | Infrastructure/DevOps | Data/Analytics | Security | Performance | Architecture | Integration | Multiple areas]
+    validations:
+      required: true
+
+  - type: textarea
+    id: request-context
+    attributes:
+      label: "Request Context"
+      description: "Provide background and context for your support need"
+      placeholder: |
+        **What are you working on?**
+        [Describe the project, system, or feature you're developing]
+
+        **What's the broader goal or objective?**
+        [Explain the overall purpose and how this support request fits in]
+
+        **Current situation:**
+        [What's your current setup or status? What's working and what isn't?]
+
+        **Stage of work:**
+        [e.g., planning, development, testing, deployment, optimization, troubleshooting]
+    validations:
+      required: true
+
+  - type: textarea
+    id: specific-needs
+    attributes:
+      label: "Specific Support Needs"
+      description: "Clearly describe what you need help with"
+      placeholder: |
+        **What do you need help with?**
+        [Be specific about the support you're requesting]
+
+        **For Infrastructure/Access Requests:**
+        - Specific access needed (repositories, environments, services)
+        - Permission levels required
+        - Environment specifications
+        - Security considerations
+
+        **For Technical Guidance/Consultation:**
+        - Specific questions or areas needing advice
+        - Technical challenges or blockers
+        - What aspects need attention (performance, security, scalability, etc.)
+        - What would ideal guidance look like
+
+        **Expected Outcome:**
+        [What should the end result look like? How will you know this was successful?]
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-approach
+    attributes:
+      label: "Current Approach and Research"
+      description: "Share what you've already tried or considered"
+      placeholder: |
+        **What have you tried so far?**
+        [Describe your current approach, solutions attempted, or research done]
+
+        **Options you're considering:**
+        [What alternatives are you evaluating?]
+
+        **Resources consulted:**
+        [Documentation, articles, or other resources you've reviewed]
+
+        **Specific blockers or concerns:**
+        [What particular challenges are you facing?]
+
+        **For access requests:**
+        - Current access level
+        - Steps already taken to resolve
+    validations:
+      required: true
+
+  - type: textarea
+    id: requirements-constraints
+    attributes:
+      label: "Requirements and Constraints"
+      description: "Provide any requirements, constraints, or approval information"
+      placeholder: |
+        **Technical Requirements:**
+        [Specific technical needs, performance requirements, compatibility needs, etc.]
+
+        **Business Requirements:**
+        [Business drivers, timeline needs, stakeholder requirements]
+
+        **Approval Information (if applicable):**
+        - **Manager/Lead Approval:** [@username of approving manager]
+        - **Business Justification:** [Why is this needed? Project requirements, role responsibilities]
+        - **Requesting User:** [Name and role if different from requester]
+
+        **Security Considerations:**
+        [Data sensitivity, compliance requirements, access duration needs]
+
+        **Timeline/Deadline:**
+        [When is this needed? Specific date and reason for deadline]
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies-environment
+    attributes:
+      label: "Dependencies and Environment"
+      description: "Provide information about dependencies and target environment"
+      placeholder: |
+        **Dependencies:**
+        [What needs to be in place first? Other approvals, prerequisite setup, coordination needed]
+
+        **Target Environment (if applicable):**
+        [Production | Staging/Testing | Development | Local | Multiple | Not applicable]
+
+        **Related Systems/Components:**
+        [What other systems or components are involved or affected?]
+
+        **Integration Points:**
+        [How does this connect to existing systems or workflows?]
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: "Provide any other relevant information"
+      placeholder: |
+        **Related Projects or Initiatives:**
+        [Is this connected to other work?]
+
+        **Team Structure:**
+        [Who else is involved? What resources are available?]
+
+        **Past Experiences:**
+        [Any relevant history or lessons learned?]
+
+        **Contact Preferences:**
+        [Best way to reach you for follow-up?]
+
+        **Other Context:**
+        [Any other information that would help fulfill this request]
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: request-checklist
+    attributes:
+      label: "Request Checklist"
+      description: "Please confirm you've completed these steps"
+      options:
+        - label: "I have provided clear context about what I'm working on"
+        - label: "I have described what I've already tried or researched"
+        - label: "I have specified what type of support I need"
+        - label: "I have included relevant requirements and constraints"
+        - label: "For access requests, I have obtained necessary approvals"

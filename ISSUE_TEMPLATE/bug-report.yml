@@ -1,0 +1,116 @@
+name: "Bug Report"
+description: "Report a bug or issue with Talus services or products"
+title: "[Bug] [Brief description of the issue]"
+labels: ["bug", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report Information
+        Use this template to report bugs, errors, or unexpected behavior in any Talus service or product.
+
+        **Response Time**: Critical bugs triaged within 4 hours. Standard bugs within 24 hours.
+
+  - type: textarea
+    id: basic-information
+    attributes:
+      label: "Basic Information"
+      description: "Provide the essential details about this bug report"
+      placeholder: |
+        **Severity Level:** [Critical - System down, users can't access services | High - Major feature broken, significant user impact | Medium - Feature partially working, workaround available | Low - Minor issue, cosmetic problem, or enhancement]
+
+        **Affected Service/Product:** [Nexus Platform | Website (talus.network) | Documentation site | Discord/Community tools | Development tools/SDK | Infrastructure/DevOps | Other (specify)]
+
+        **Other Service (if selected above):** [Specify the service if 'Other' was selected]
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Bug Description"
+      description: "Provide a comprehensive description of the bug"
+      placeholder: |
+        **What's happening:**
+        [Describe what's happening in detail]
+
+        **What you expected:**
+        [Describe what you expected to happen]
+
+        **How it's different:**
+        [Explain how the actual behavior differs from your expectations]
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: "Steps to Reproduce"
+      description: "Provide clear, step-by-step instructions to reproduce this bug"
+      placeholder: |
+        1. Go to...
+        2. Click on...
+        3. Enter...
+        4. Observe error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment-details
+    attributes:
+      label: "Environment Details"
+      description: "Information about your environment where the bug occurs"
+      placeholder: |
+        **Operating System:** [Windows 11, macOS 14, Ubuntu 22.04, etc.]
+
+        **Browser:** [Chrome 120, Safari 17, Firefox 121, etc.]
+
+        **Network:** [Mainnet, Testnet, Devnet, etc.]
+
+        **Wallet:** [if applicable]
+
+        **Device:** [Desktop, Mobile, Tablet, etc.]
+
+        **Additional environment information:**
+        [Any other relevant environment details]
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: "Additional Information"
+      description: "Provide any supporting information that helps understand the bug"
+      placeholder: |
+        **Logs and Error Messages:**
+        [Paste relevant logs or error messages here. Include timestamps if available. For browser issues, include console errors.]
+
+        **Screenshots/Screen Recordings:**
+        [Drag and drop screenshots or provide links to screen recordings. Mark sensitive information before sharing.]
+
+        **User Impact:**
+        [How many users are likely affected? (Just me | Few users | Many users | All users | Unknown)]
+
+        **Workaround (if any):**
+        [Describe any workaround you've found, or note if none exists]
+
+        **Regression Status:**
+        [Did this work before? (This never worked | This worked before (regression) | Unsure/new to the platform)]
+
+        **Last Working Version (if regression):**
+        [When did this last work correctly? (Version number, date, or timeframe)]
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: reporter-actions
+    attributes:
+      label: "Reporter Checklist"
+      description: "Please confirm you've completed these steps"
+      options:
+        - label: "I have searched for existing issues describing this bug"
+        - label: "I can reproduce this issue consistently"
+        - label: "I have provided clear steps to reproduce"
+        - label: "I have included relevant environment details"
+        - label: "I have removed/masked sensitive information from logs and screenshots"

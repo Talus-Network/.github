@@ -1,0 +1,244 @@
+name: "Epic - Standard Release"
+description: "Standard epic template for regular feature releases following FDD-Release process"
+title: "Epic v[X.Y.Z]: [Epic Name]"
+labels: ["epic", "release"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Standard Release Epic Template
+        This template follows our FDD-Release process. All epics must reference an approved Improvement Proposal (IP).
+
+        Use strikethrough (`~not applicable~`) with reasoning for items that don't apply to this release.
+
+  - type: input
+    id: release-version
+    attributes:
+      label: "Release Version"
+      description: "Target release version"
+      placeholder: "v0.3.0"
+    validations:
+      required: true
+
+  - type: input
+    id: target-release-date
+    attributes:
+      label: "Target Release Date"
+      description: "Planned release date"
+      placeholder: "YYYY-MM-DD"
+    validations:
+      required: true
+
+  - type: input
+    id: epic-lead
+    attributes:
+      label: "Epic Lead"
+      description: "GitHub username of epic lead"
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: input
+    id: technical-owner
+    attributes:
+      label: "Technical Owner"
+      description: "Engineering lead for this epic"
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: input
+    id: business-owner
+    attributes:
+      label: "Business Owner"
+      description: "Business/product lead for this epic"
+      placeholder: "@username"
+
+  - type: textarea
+    id: epic-description
+    attributes:
+      label: "Epic Description"
+      description: "Clear, concise description of what this epic delivers and why"
+      placeholder: "Provide a clear description of the epic's purpose and scope..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: "Success Criteria"
+      description: "Specific measurable outcomes that define success"
+      placeholder: |
+        - [ ] Specific measurable outcome 1
+        - [ ] Specific measurable outcome 2
+        - [ ] Specific measurable outcome 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: pre-implementation-checklist
+    attributes:
+      label: "Pre-Implementation Checklist"
+      description: "Reference completed IP process rather than duplicate work"
+      placeholder: |
+        ### Architecture Pipeline Completion
+        - [ ] **Improvement Proposal Approved** _(reference IP-YYYY-MM-DD: [Title] - issue #xxx)_
+          - [ ] Strategic review complete (internal) OR Community consensus achieved (external)
+          - [ ] Technical feasibility confirmed
+          - [ ] All IP comments resolved
+          - [ ] Final approval documented
+
+        ### Implementation Prerequisites
+        - [ ] **Technical Dependencies Resolved** _(create dependency issues #xxx or reference existing)_
+        - [ ] **Resource Allocation Confirmed** _(team assignments and timeline approved)_
+        - [ ] **Integration Planning Complete** _(downstream impact analysis from IP)_
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-tracking
+    attributes:
+      label: "Implementation Tracking"
+      description: "Create GitHub issues for each applicable item and link them here"
+      placeholder: |
+        ### Core Development
+        - [ ] **Feature Development Tasks** _(break down into specific implementation issues)_
+          - [ ] [Feature 1 implementation] _(issue #xxx)_
+          - [ ] [Feature 2 implementation] _(issue #xxx)_
+          - [ ] [Feature N implementation] _(issue #xxx)_
+
+        ### Documentation Tasks
+        > Create separate issues for each documentation type that requires updates
+
+        - [ ] **API Documentation** _(issue #xxx or ~not applicable~)_
+        - [ ] **CLI Documentation** _(issue #xxx or ~not applicable~)_
+        - [ ] **Installation Guides** _(issue #xxx or ~not applicable~)_
+        - [ ] **Architecture Decision Records (ADRs)** _(issue #xxx for each new ADR)_
+        - [ ] **User Guides** _(issue #xxx or ~not applicable~)_
+        - [ ] **Developer Integration Guides** _(issue #xxx or ~not applicable~)_
+        - [ ] **Migration Guides** _(issue #xxx or ~not applicable~)_
+
+        ### Infrastructure & DevOps
+        - [ ] **Infrastructure Updates** _(issue #xxx for each infra change)_
+        - [ ] **CI/CD Pipeline Updates** _(issue #xxx or ~not applicable~)_
+        - [ ] **Deployment Scripts** _(issue #xxx or ~not applicable~)_
+        - [ ] **Monitoring & Observability** _(issue #xxx or ~not applicable~)_
+
+        ### Quality Assurance
+        - [ ] **Testing Strategy** _(issue #xxx defining test approach)_
+          - [ ] Unit Tests _(part of feature issues or separate #xxx)_
+          - [ ] Integration Tests _(issue #xxx)_
+          - [ ] End-to-End Tests _(issue #xxx)_
+          - [ ] Performance Tests _(issue #xxx or ~not applicable~)_
+        - [ ] **Security Review** _(issue #xxx or ~not applicable~)_
+        - [ ] **Audit Preparation** _(issue #xxx or ~not applicable for this release~)_
+
+        ### Release Engineering
+        - [ ] **Release Artifacts** _(tracked automatically via CI/CD)_
+          - [ ] Binary builds _(automated)_
+          - [ ] Package distributions _(automated)_
+          - [ ] Container images _(automated)_
+        - [ ] **Release Notes** _(issue #xxx)_
+        - [ ] **Changelog Updates** _(issue #xxx)_
+        - [ ] **Version Tagging** _(automated via release process)_
+    validations:
+      required: true
+
+  - type: textarea
+    id: pre-release-gates
+    attributes:
+      label: "Pre-Release Gates"
+      description: "Items that must be completed before release deployment"
+      placeholder: |
+        ### Code Freeze Criteria
+        - [ ] All implementation issues closed
+        - [ ] All documentation issues closed
+        - [ ] All infrastructure issues resolved
+        - [ ] Release candidate tagged
+
+        ### Testing & Validation
+        - [ ] **Testing Completion** _(all testing issues closed)_
+        - [ ] **Security Review Passed** _(issue #xxx closed or ~not required~)_
+        - [ ] **Performance Validation** _(issue #xxx closed or ~not required~)_
+        - [ ] **Integration Testing Passed** _(issue #xxx closed)_
+
+        ### Release Readiness
+        - [ ] **Release Notes Finalized** _(issue #xxx closed)_
+        - [ ] **Documentation Updated** _(all doc issues closed)_
+        - [ ] **Deployment Scripts Ready** _(issue #xxx closed or ~not applicable~)_
+        - [ ] **Rollback Plan Documented** _(issue #xxx or ~not applicable~)_
+    validations:
+      required: true
+
+  - type: textarea
+    id: post-release-handover
+    attributes:
+      label: "Post-Release Handover"
+      description: "Tasks completed after successful release deployment"
+      placeholder: |
+        ### Handover Tasks
+        - [ ] **DevRel Handover** _(create handover issue #xxx)_
+          - [ ] Developer documentation review
+          - [ ] Integration examples updated
+          - [ ] Community communication sent
+        - [ ] **Product Handover** _(create handover issue #xxx)_
+          - [ ] Feature validation completed
+          - [ ] User feedback collection setup
+          - [ ] Metrics dashboard updated
+        - [ ] **Marketing Handover** _(create handover issue #xxx)_
+          - [ ] Release announcement published
+          - [ ] Marketing materials updated
+          - [ ] Partner communications sent
+
+        ### Post-Release Monitoring
+        - [ ] **Release Health Check** _(issue #xxx for 48-hour monitoring)_
+        - [ ] **User Feedback Collection** _(issue #xxx)_
+        - [ ] **Performance Monitoring** _(issue #xxx or automated)_
+        - [ ] **Issue Triage Setup** _(issue #xxx for post-release support)_
+
+  - type: textarea
+    id: notes-context
+    attributes:
+      label: "Notes & Context"
+      description: "Key decisions, assumptions, constraints, and dependencies"
+      placeholder: |
+        ### Key Decisions Made
+        - [Document major architectural or product decisions made during epic]
+
+        ### Assumptions & Constraints
+        - [List any assumptions that could affect the epic]
+        - [Note any constraints that influenced the approach]
+
+        ### Dependencies
+        - **Blocked by:** [List epics/issues this depends on]
+        - **Blocks:** [List epics/issues that depend on this]
+
+        ### Risks & Mitigation
+        - **Risk:** [Description] | **Mitigation:** [Approach]
+
+  - type: textarea
+    id: related-links
+    attributes:
+      label: "Related Links"
+      description: "Important reference links"
+      placeholder: |
+        - **Improvement Proposal:** [Link to approved IP issue]
+        - **Strategic RFC:** [Link to Notion RFC if internal origin]
+        - **Community Discussion:** [Link to GitHub Discussion if external origin]
+        - **Technical RFC:** [Link to GitHub RFC if applicable]
+        - **Design Documents:** [Links to detailed design docs]
+        - **Previous Release:** [Link to previous epic]
+        - **Next Planned Release:** [Link to next epic if known]
+
+  - type: checkboxes
+    id: epic-completion
+    attributes:
+      label: "Epic Completion Criteria"
+      description: "Epic is considered complete when all criteria are met"
+      options:
+        - label: "All pre-release gates passed"
+        - label: "Release successfully deployed to production"
+        - label: "All handover tasks completed"
+        - label: "Post-release monitoring established"
+        - label: "This epic marked as closed"

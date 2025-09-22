@@ -1,0 +1,299 @@
+name: "Epic - Emergency Release"
+description: "Streamlined epic template for emergency releases and critical fixes"
+title: "Emergency Epic v[X.Y.Z]: [Critical Fix Description]"
+labels: ["epic", "emergency", "critical"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Emergency Release Epic Template
+
+        **EMERGENCY PROCESS**: This template is for critical fixes requiring immediate release.
+
+        Use this for:
+        - Security vulnerabilities requiring immediate patches
+        - Critical system failures affecting users
+        - Incident response deployments
+        - Urgent dependency updates
+
+        **Streamlined Process**: Emergency releases may skip normal IP process but must document all decisions.
+
+  - type: dropdown
+    id: emergency-type
+    attributes:
+      label: "Emergency Type"
+      description: "What type of emergency release is this?"
+      options:
+        - Security vulnerability fix
+        - Critical system failure
+        - Incident response deployment
+        - Urgent dependency update
+        - Data integrity issue
+        - Service outage resolution
+        - Other critical issue
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity-level
+    attributes:
+      label: "Severity Level"
+      description: "How critical is this emergency?"
+      options:
+        - Critical - System down, immediate action required
+        - High - Major functionality broken, users significantly affected
+        - Medium - Important fix needed, some user impact
+    validations:
+      required: true
+
+  - type: input
+    id: release-version
+    attributes:
+      label: "Emergency Release Version"
+      description: "Version number for this emergency release"
+      placeholder: "v0.2.1 (patch) or v0.3.0-hotfix.1"
+    validations:
+      required: true
+
+  - type: input
+    id: target-deployment
+    attributes:
+      label: "Target Deployment Time"
+      description: "When does this need to be deployed?"
+      placeholder: "Within 4 hours, by EOD, ASAP, etc."
+    validations:
+      required: true
+
+  - type: input
+    id: incident-reference
+    attributes:
+      label: "Incident Reference"
+      description: "Link to incident documentation or response"
+      placeholder: "Link to incident doc, security advisory, or GitHub issue"
+
+  - type: input
+    id: epic-lead
+    attributes:
+      label: "Emergency Response Lead"
+      description: "Person coordinating the overall emergency response, communications, and decisions"
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: input
+    id: technical-owner
+    attributes:
+      label: "Technical Lead"
+      description: "Engineering lead who owns the technical implementation and validation"
+      placeholder: "@username"
+    validations:
+      required: true
+
+  - type: textarea
+    id: emergency-description
+    attributes:
+      label: "Emergency Description"
+      description: "Clear description of the issue and why emergency release is needed"
+      placeholder: |
+        - What specific issue is being addressed?
+        - What is the user/system impact?
+        - Why does this require emergency deployment?
+        - What are the risks of not deploying immediately?
+    validations:
+      required: true
+
+  - type: textarea
+    id: immediate-impact
+    attributes:
+      label: "Current Impact"
+      description: "What is currently broken or at risk?"
+      placeholder: |
+        - Systems/features currently affected
+        - Users experiencing issues
+        - Security exposure or vulnerability
+        - Business impact
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-fix
+    attributes:
+      label: "Proposed Fix"
+      description: "What changes will be made to address the emergency?"
+      placeholder: |
+        - Specific code/configuration changes
+        - Security patches being applied
+        - Systems being restored/fixed
+        - Dependencies being updated
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: emergency-checklist
+    attributes:
+      label: "Emergency Response Checklist"
+      description: "Streamlined requirements for emergency releases"
+      options:
+        - label: "Incident Response Reference - link to incident documentation"
+        - label: "Security Review - expedited security assessment completed"
+        - label: "Critical Testing - focused testing on fix functionality"
+        - label: "Communication Plan - stakeholders notified of emergency deployment"
+        - label: "Rollback Plan - clear rollback procedure documented"
+
+  - type: textarea
+    id: critical-tasks
+    attributes:
+      label: "Critical Implementation Tasks"
+      description: "Essential tasks that must be completed (create issues and link)"
+      placeholder: |
+        Emergency implementation tasks:
+        - [ ] [Critical fix implementation] (issue #xxx)
+        - [ ] [Security patch application] (issue #xxx)
+        - [ ] [Configuration update] (issue #xxx)
+        - [ ] [Emergency testing] (issue #xxx)
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing-approach
+    attributes:
+      label: "Emergency Testing Strategy"
+      description: "How will the fix be validated before deployment?"
+      placeholder: |
+        Focused testing approach:
+        - [ ] Unit tests for changed components
+        - [ ] Integration tests for affected workflows
+        - [ ] Smoke tests for critical functionality
+        - [ ] Manual verification of fix effectiveness
+    validations:
+      required: true
+
+  - type: textarea
+    id: deployment-plan
+    attributes:
+      label: "Deployment Plan"
+      description: "How will this emergency fix be deployed?"
+      placeholder: |
+        - Deployment method (rolling, blue-green, immediate)
+        - Deployment timeline and steps
+        - Monitoring during deployment
+        - Validation steps post-deployment
+    validations:
+      required: true
+
+  - type: textarea
+    id: rollback-plan
+    attributes:
+      label: "Rollback Plan"
+      description: "How to quickly revert if issues arise"
+      placeholder: |
+        - Rollback trigger conditions
+        - Rollback procedure and timeline
+        - Rollback testing requirements
+        - Communication plan for rollback scenario
+    validations:
+      required: true
+
+  - type: textarea
+    id: risk-assessment
+    attributes:
+      label: "Risk Assessment"
+      description: "Risks of deploying vs. not deploying"
+      placeholder: |
+        **Risks of Deploying:**
+        - Potential new issues introduced
+        - Deployment complications
+        - User experience disruption during deployment
+
+        **Risks of NOT Deploying:**
+        - Continued security exposure
+        - Ongoing system failures
+        - User/business impact continues
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: stakeholder-communication
+    attributes:
+      label: "Stakeholder Communication"
+      description: "Required communications for emergency deployment"
+      options:
+        - label: "Internal team notified of emergency deployment"
+        - label: "Leadership briefed on issue and resolution approach"
+        - label: "User-facing communication prepared (if needed)"
+        - label: "External partners notified (if applicable)"
+        - label: "Community communication plan ready"
+
+  - type: checkboxes
+    id: deployment-gates
+    attributes:
+      label: "Emergency Deployment Gates"
+      description: "Minimum requirements before deployment"
+      options:
+        - label: "Fix implementation completed and tested"
+        - label: "Emergency testing passed"
+        - label: "Deployment scripts/process validated"
+        - label: "Rollback procedure confirmed ready"
+        - label: "On-call support coverage confirmed"
+
+  - type: textarea
+    id: post-deployment
+    attributes:
+      label: "Post-Deployment Monitoring"
+      description: "How will the fix be monitored after deployment?"
+      placeholder: |
+        - Key metrics to monitor
+        - Alert thresholds and escalation
+        - Timeline for monitoring (24-48 hours)
+        - Success validation criteria
+    validations:
+      required: true
+
+  - type: textarea
+    id: follow-up-actions
+    attributes:
+      label: "Follow-up Actions"
+      description: "What needs to happen after the emergency is resolved?"
+      placeholder: |
+        - [ ] Post-incident review/retrospective
+        - [ ] Permanent fix (if this is a temporary solution)
+        - [ ] Process improvements to prevent recurrence
+        - [ ] Documentation updates
+        - [ ] Security audit (if security-related)
+
+  - type: textarea
+    id: lessons-learned
+    attributes:
+      label: "Lessons Learned (Post-Deployment)"
+      description: "What did we learn from this emergency? (Complete after resolution)"
+      placeholder: |
+        - What went well in the response?
+        - What could be improved next time?
+        - Process or system changes needed?
+        - Prevention strategies identified?
+
+  - type: textarea
+    id: decision-log
+    attributes:
+      label: "Key Decisions Made"
+      description: "Document critical decisions and rationale"
+      placeholder: |
+        Emergency decisions made:
+        - Decision: [What was decided] | Rationale: [Why]
+        - Decision: [What was decided] | Rationale: [Why]
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: emergency-completion
+    attributes:
+      label: "Emergency Resolution Criteria"
+      description: "Emergency is resolved when all criteria are met"
+      options:
+        - label: "Critical fix deployed successfully"
+        - label: "System functionality restored"
+        - label: "User impact resolved"
+        - label: "Post-deployment monitoring shows stability"
+        - label: "Follow-up actions scheduled/completed"
+        - label: "Emergency epic closed"

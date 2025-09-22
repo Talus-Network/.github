@@ -1,0 +1,123 @@
+name: "Feature Request"
+description: "Request new functionality or enhancement"
+title: "[Feature] [Brief description of requested feature]"
+labels: ["enhancement", "needs-evaluation"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Feature Request Process
+
+        **Important**: Most feature requests should start as [GitHub Discussions](../../discussions) to gather community input before creating formal requests.
+
+        Use this template for:
+        - Internal business-driven feature requirements
+        - Requests that have been discussed and refined in community discussions
+        - Cross-functional feature requests requiring coordination
+
+        **Response Time**: Feature requests are reviewed in weekly planning cycles.
+
+  - type: textarea
+    id: basic-information
+    attributes:
+      label: "Basic Information"
+      description: "Provide the essential details about this feature request"
+      placeholder: |
+        **Request Type:** [New feature/capability | Enhancement to existing feature | Integration request | Developer tools/experience | Documentation/content feature | Infrastructure/operational feature]
+
+        **Related Discussion (if any):**
+        [Link to GitHub Discussion or community conversation]
+
+        **Primary User Type:** [End users (platform users) | Developers/integrators | Internal team members | External partners | System administrators | Multiple user types]
+
+        **Business Priority:** [Critical - blocking key objectives | High - important for roadmap goals | Medium - valuable enhancement | Low - nice to have | Future consideration]
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: "Problem Statement"
+      description: "Describe the problem this feature solves and its business impact"
+      placeholder: |
+        **Problem/Need:**
+        [What problem are users currently experiencing? What need is not being met? What opportunity does this address?]
+
+        **Business Impact:**
+        [How will this feature impact the business? Consider revenue/growth impact, user acquisition/retention, operational efficiency, competitive advantages, or risk mitigation.]
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: "Proposed Solution"
+      description: "Describe your proposed solution and how users will interact with it"
+      placeholder: |
+        **Feature Summary:**
+        [Provide a clear, concise description of what you want to be built or changed.]
+
+        **Proposed Solution:**
+        [Describe your proposed solution including key functionality needed, user experience considerations, integration points, and success criteria.]
+
+        **User Stories:**
+        [Describe who will use this and how. For example:
+        - As a developer, I want...
+        - As a platform user, I want...
+        - As an administrator, I want...]
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-considerations
+    attributes:
+      label: "Implementation Considerations"
+      description: "Provide technical context and alternatives considered"
+      placeholder: |
+        **Estimated Complexity:**
+        [How complex do you think this feature is? (Simple - few days to implement | Medium - 1-2 weeks of work | Complex - multiple weeks/sprint | Major - requires significant planning | Unknown - needs technical investigation)]
+
+        **Technical Considerations:**
+        [Any technical requirements or constraints? Consider performance requirements, security considerations, integration requirements, compatibility needs, or scalability concerns.]
+
+        **Alternatives Considered:**
+        [What other solutions have you considered? Include other approaches to solving this problem, existing tools or workarounds, and why those alternatives are insufficient.]
+    validations:
+      required: false
+
+  - type: textarea
+    id: success-metrics
+    attributes:
+      label: "Success Metrics"
+      description: "Define how success will be measured for this feature"
+      placeholder: |
+        **Timeline Requirements:**
+        [When is this needed and why? Include specific date and reason for deadline, or note if there's no specific deadline.]
+
+        **Success Metrics:**
+        [How will we measure success of this feature? Consider usage metrics (adoption rate, frequency), performance metrics (speed, efficiency), business metrics (conversion, retention), or user satisfaction indicators.]
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: "Additional Context"
+      description: "Provide any other relevant information"
+      placeholder: |
+        [Include related features or dependencies, regulatory or compliance considerations, market research or competitor analysis, user feedback or requests, or any other context that would help evaluate this feature request.]
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: request-checklist
+    attributes:
+      label: "Request Checklist"
+      description: "Please confirm you've completed these steps"
+      options:
+        - label: "I have searched for existing similar feature requests"
+        - label: "I have clearly described the problem this solves"
+        - label: "I have considered and documented alternatives"
+        - label: "I have provided business justification"
+        - label: "I understand this will be evaluated against other priorities"

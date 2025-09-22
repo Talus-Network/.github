@@ -1,0 +1,82 @@
+name: "Website Content Update"
+description: "Request updates to website content, documentation, or whitepaper deployment"
+title: "[Website] [Brief description of update]"
+labels: ["website", "content-update"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Request Information
+        Use this template for website content updates, documentation changes, or whitepaper deployments.
+
+        **Response Time**: Standard updates processed within 2-3 business days. Urgent requests marked appropriately.
+
+  - type: textarea
+    id: basic-information
+    attributes:
+      label: "Basic Information"
+      description: "Provide the essential details about this update"
+      placeholder: |
+        **Update Type:** [Documentation update | Whitepaper deployment | Blog post/news | Landing page content | Product information | Legal/policy updates | Other]
+
+        **Urgency Level:** [Standard (2-3 business days) | High (within 24 hours) | Critical (same day required)]
+    validations:
+      required: true
+
+  - type: textarea
+    id: content-details
+    attributes:
+      label: "Content Details"
+      description: "Provide information about the content to be updated"
+      placeholder: |
+        **Content Description:**
+        [Describe what needs to be updated. Provide clear description of the content changes needed.]
+
+        **Content Source:**
+        [Where is the new/updated content located? Include link to updated whitepaper PDF, Notion document URL, Google Drive link, or inline text (for small changes).]
+
+        **Target Page/URL:**
+        [Which page(s) should be updated? Include https://talus.network/... or specify page name.]
+    validations:
+      required: true
+
+  - type: textarea
+    id: approval-process
+    attributes:
+      label: "Approval Process"
+      description: "Provide information about content approval"
+      placeholder: |
+        **Content Approval Status:**
+        [Has this content been approved for publication? (Approved and ready for deployment | Pending approval (specify approver below) | Draft/needs review)]
+
+        **Approver (if pending):**
+        [Who needs to approve this content? Include @username or role.]
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-considerations
+    attributes:
+      label: "Additional Considerations"
+      description: "Provide any other relevant information"
+      placeholder: |
+        **SEO Considerations:**
+        [Does this update affect SEO or require special handling? (No SEO impact | Minor SEO updates needed | Significant SEO review required | New page/major restructure)]
+
+        **Additional Context:**
+        [Include related to specific release or announcement, dependencies on other updates, special formatting requirements, deadline context, or any other relevant information.]
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: completion-checklist
+    attributes:
+      label: "Completion Requirements"
+      description: "What's needed when this is complete?"
+      options:
+        - label: "Content deployed to production"
+        - label: "SEO metadata updated"
+        - label: "Internal teams notified"
+        - label: "Social media/marketing coordinated"
+        - label: "Documentation updated"

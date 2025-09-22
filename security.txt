@@ -1,0 +1,3 @@
+Contact: security-reports@taluslabs.xyz
+Encryption: https://talus.network/security-pgp-key.txt
+Policy: https://github.com/Talus-Network/nexus-sdk/blob/main/SECURITY.md

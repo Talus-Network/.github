@@ -1,0 +1,150 @@
+name: "Improvement Proposal"
+description: "Submit a formal improvement proposal following FDD-Release framework"
+title: "IP-[YYYY-MM-DD]: [Title]"
+labels: ["proposal", "draft"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Template Information
+        - **Version**: 1.2.0
+        - **Last Updated**: 2024-12-XX
+        - **Process**: [FDD-Release Framework](https://github.com/Talus-Network/.github/blob/main/docs/fdd-process.md)
+
+        All improvement proposals must follow our systematic evaluation process. See the IP Process documentation for detailed guidelines.
+
+  - type: textarea
+    id: basic-information
+    attributes:
+      label: "Basic Information"
+      description: "Provide the essential details about this proposal"
+      placeholder: |
+        **Source Stream:** [Internal Strategic RFC | External Community Discussion | Emergency Response]
+
+        **Related Links:**
+        - **Strategic RFC (if internal origin):** [Link to Notion RFC]
+        - **Community Discussion (if external origin):** [Link to GitHub Discussion]
+        - **Technical RFC (if applicable):** [Link to technical RFC discussion]
+
+        **Business Driver:** [Brief statement of the core problem or opportunity]
+
+        **Strategic Priority:** [High | Medium | Low]
+    validations:
+      required: true
+
+  - type: textarea
+    id: value-proposition
+    attributes:
+      label: "Value Proposition"
+      description: "Describe the proposal and its strategic alignment"
+      placeholder: |
+        **Proposal Summary:**
+        [Provide a clear, concise summary of the proposed solution.]
+
+        **Core Value Proposition:**
+        [What value does this deliver and who benefits? What specific outcomes are expected?]
+
+        **Strategic Alignment:**
+        [How does this support current strategic goals? What is the priority relative to other initiatives? Are there strategic timing considerations?]
+    validations:
+      required: true
+
+  - type: textarea
+    id: implementation-analysis
+    attributes:
+      label: "Implementation Analysis"
+      description: "Analyze the operational and resource implications"
+      placeholder: |
+        **Operational Considerations:**
+        [How does this affect day-to-day operations? What new processes or capabilities are needed? What operational changes are required?]
+
+        **Economic Impact:**
+        [What are the financial implications? Include development cost estimates, operational cost implications, revenue/value generation potential, and resource requirements.]
+
+        **Resource Requirements:**
+        [What resources are needed for implementation? Consider engineering effort required, other team involvement needed, timeline estimates, and budget considerations.]
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical-assessment
+    attributes:
+      label: "Technical Assessment"
+      description: "Evaluate technical requirements and risks"
+      placeholder: |
+        **Technical Requirements:**
+        [What are the core technical components and requirements? Consider technology stack implications, performance requirements, and integration needs.]
+
+        **Dependencies:**
+        [What are the prerequisites and blocking factors? Consider what this depends on, blocking factors or prerequisites, timeline impact of dependencies, and external dependencies.]
+
+        **Security & Risk Assessment:**
+        [What are the security implications and risk mitigation strategies? Consider security implications, technical risks and mitigation strategies, failure scenarios and contingencies, and risk tolerance assessment.]
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact-analysis
+    attributes:
+      label: "Impact Analysis"
+      description: "Assess downstream impact and technical debt"
+      placeholder: |
+        **Downstream Impact:**
+        [How will this affect existing systems and processes? Consider what systems/processes will be affected, breaking changes or migration needs, user impact and communication needs, and ecosystem implications.]
+
+        **Technical Debt Assessment:**
+        [What are the technical debt implications? Consider new technical debt introduced, existing technical debt addressed, long-term maintenance implications, and code quality impact.]
+
+        **Integration Requirements:**
+        [What are the integration and compatibility needs? Consider how this integrates with existing systems, API changes or new interfaces needed, documentation and training requirements, and compatibility considerations.]
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-metrics
+    attributes:
+      label: "Success Metrics"
+      description: "Define how success will be measured"
+      placeholder: |
+        [How will we measure success? What metrics will we track? How will success criteria be defined? What monitoring and evaluation approach will be used?]
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-work
+    attributes:
+      label: "Related Work"
+      description: "Reference related issues and implementation details"
+      placeholder: |
+        **Related Issues/Proposals:**
+        [Links to related IPs or issues, dependencies on other proposals, related community discussions, historical context]
+
+        **Implementation Plan (if detailed design requested):**
+        [Provide detailed implementation approach if requested during review, including architecture overview, implementation phases, technical specifications, and testing strategy.]
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: review-status
+    attributes:
+      label: "Review Status"
+      description: "Track completion of review phases"
+      options:
+        - label: "Strategic Review Complete (internal RFCs only)"
+        - label: "Community Consensus Achieved (external discussions only)"
+        - label: "Technical Review Complete (all GitHub comments resolved)"
+        - label: "Comment Resolution Verified (review team confirmation)"
+        - label: "Final Approval Pending"
+
+  - type: checkboxes
+    id: proposal-checklist
+    attributes:
+      label: "Proposal Checklist"
+      description: "Confirm proposal completeness"
+      options:
+        - label: "I have provided clear value proposition and business justification"
+        - label: "I have assessed technical feasibility and dependencies"
+        - label: "I have considered security and risk implications"
+        - label: "I have defined success metrics and evaluation criteria"
+        - label: "I understand this proposal will undergo systematic review and comment resolution"
