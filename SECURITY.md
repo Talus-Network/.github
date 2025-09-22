@@ -1,86 +1,144 @@
 # Talus Labs Security Policy
 
-This document describes the Talus Labs Security team's process for handling security issues.
+This document describes the Talus Labs security team's process for handling security issues across all Talus repositories and services.
 
 ## Reporting Security Issues
 
-__IMPORTANT:__ _Please DO NOT open public issues for security related matters, or discuss it in public forum or on social media._
+**IMPORTANT:** Please DO NOT open public issues for security-related matters or discuss them in public forums or on social media.
 
-### Email
+### Primary Reporting Methods
 
-All security issues should be reported via email to [security-reports@taluslabs.xyz](mailto:security-reports@taluslabs.xyz). Email is delivered to the Talus Labs security team.
+#### Email (Recommended)
+Report security issues to: **[security-reports@taluslabs.xyz](mailto:security-reports@taluslabs.xyz)**
 
-Include the following details in the report:
+Include these details in your report:
+- **Your information**: Name and affiliation (if applicable)
+- **Technical description**: Detailed issue explanation with reproduction steps
+- **Impact assessment**: Who can exploit this and what the implications may be
+- **Visibility status**: Whether this vulnerability is public or known to third parties
+- **Supporting evidence**: Relevant logs, screenshots, or proof-of-concept (if safe to share)
 
-- Your name;
-- Your affiliation (if applicable);
-- Technical description of the issue, including steps to reproduce;
-- Explanation of who may be able to exploit this vulnerability and what the impact or implications may be;
-- Whether this vulnerability is public or known to third parties. Please provide details where applicable;
+#### GitHub Private Vulnerability Reporting
+For repository-specific issues, use GitHub's private vulnerability reporting:
+1. Navigate to the repository's "Security" tab
+2. Click "Report a vulnerability" under Security Advisories
+3. Complete the form with detailed information
 
-_Please notify the Talus Labs security team at the email above of existing public issues that may be of critical security importance._ Please ensure to include the issue ID along with a short description / explanation of the security relevance.
-
-### GitHub Private Vulnerability Reporting
-
-Under the repository "Security" tab / Security Advisories you will find "Report a vulnerability". Please complete the provided form with as much details as possible.
-
-For more information on GitHub private vulnerability reporting [see this](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability).
-
-_Best practices for writing repository security advisories_ can be found [here](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/best-practices-for-writing-repository-security-advisories).
-
-Security researchers can also use the REST API to privately report security vulnerabilities. For more information, see "[Privately report a security vulnerability](https://docs.github.com/en/rest/security-advisories/repository-advisories#privately-report-a-security-vulnerability)" in the REST API documentation.
+See [GitHub's documentation](https://docs.github.com/en/code-security/security-advisories/guidance-on-reporting-and-writing/privately-reporting-a-security-vulnerability) for more information.
 
 ### Encrypted Communication
 
-If you wish to encrypt your vulnerability report, please use our PGP public key:
-
+For sensitive reports, use our PGP public key:
 - **Download**: [https://talus.network/security-pgp-key.txt](https://talus.network/security-pgp-key.txt)
 - **Key Server**: [keys.openpgp.org](https://keys.openpgp.org)
 - **Fingerprint**: `103391C9AE4BE87A85E3EFAE2D4462A29BAB94AE`
 
-Always verify the fingerprint before using the key.
+**Always verify the fingerprint before using the key.**
 
-## Handling Security Issues
+## Our Response Process
 
 The Talus Labs security team will:
 
-1. Acknowledge receipt within 72 hours;
-2. Verify and confirm the issue;
-3. Determine affected versions and scope of impact;
-4. Conduct audits to find any potential similar and related issues;
-5. Prepare fixes for relevant in-production releases;
-6. Endeavor to communicate and coordinate with relevant ecosystem stakeholders, including the Nexus communities, at the appropriate times;
+1. **Acknowledge receipt** within 72 hours
+2. **Verify and assess** the reported vulnerability
+3. **Determine scope** including affected versions and impact assessment
+4. **Audit for similar issues** to prevent related vulnerabilities
+5. **Develop fixes** for all affected production releases
+6. **Coordinate disclosure** with ecosystem stakeholders when appropriate
+7. **Deploy fixes** following our emergency release procedures
+8. **Publish advisories** once fixes are deployed and users can update
 
-Please assist the Talus Labs security team by following these guidelines:
+### Timeline Expectations
+- **Initial response**: Within 72 hours
+- **Severity assessment**: Within 5 business days
+- **Fix development**: Varies by complexity, communicated during assessment
+- **Public disclosure**: After fixes are available and reasonable time for adoption
 
-- Allow a reasonable amount of time for the team to respond to and address the issue;
-- Avoid exploiting any issues or vulnerabilities that you may become aware of;
-- Demonstrate good faith by not disrupting the Talus Labs / Nexus networks, data, services or communities;
+## Incident Response Integration
 
-_Every effort will be made to handle and address security issues as quickly and efficiently as possible._
+Security issues may trigger our [Incident Management Plan](https://www.notion.so/taluslabs/Incident-Management-Plan-25e7a61d1baa80498736f5ece8e58ece), particularly for:
+- Active exploits affecting user funds or data
+- Platform-wide vulnerabilities
+- Critical infrastructure compromises
 
-## Safe Harbor
+In such cases, response times may be accelerated and additional coordination procedures activated.
 
-Talus Labs is committed to working with security researchers and the broader security community. We believe that responsible security research benefits everyone and helps keep our users safe.
+## Researcher Guidelines
 
-**Legal Safe Harbor**: When conducting vulnerability research in accordance with this policy, we consider such research to be:
+Please help us handle security issues effectively by:
 
-- **Authorized** in accordance with applicable computer fraud and abuse laws, and we will not initiate or recommend legal action against you for accidental, good-faith violations of this policy;
-- **Exempt** from restrictions in our Terms of Service/Use that would interfere with conducting security research, and we waive those restrictions on a limited basis for work done under this policy;
-- **Lawful** and helpful to the overall security of the Internet when conducted in good faith and in compliance with applicable laws.
+### Responsible Disclosure
+- **Allow reasonable time** for our team to respond and address issues
+- **Coordinate disclosure timing** to ensure users can protect themselves
+- **Provide clear communication** throughout the process
 
-**Research Guidelines**: To qualify for safe harbor protection, security research must be conducted in good faith, which means:
+### Research Ethics
+- **Avoid exploitation** of discovered vulnerabilities
+- **Demonstrate good faith** by not disrupting services, data, or communities
+- **Respect privacy** and avoid accessing user data
+- **Follow applicable laws** in your research activities
 
-- You make a good faith effort to avoid privacy violations, destruction of data, and interruption or degradation of Talus Labs services and the Nexus network;
-- You do not access, modify, or delete data belonging to others;
-- You do not perform attacks that could harm the reliability/integrity of our services or data;
-- You do not use social engineering techniques against our employees, contractors, or community members;
-- You provide us with reasonable time to address the issue before any disclosure;
-- You do not violate any law or breach any agreement in the course of your research.
+## Safe Harbor Policy
 
-**Scope**: This safe harbor applies to security research conducted on:
-- Talus Labs operated infrastructure and services
-- Open source Nexus software and related repositories
-- Public-facing websites and applications operated by Talus Labs
+Talus Labs is committed to working constructively with security researchers and the broader security community.
 
-If you have questions about whether your research is consistent with this policy, please contact us at [security-reports@taluslabs.xyz](mailto:security-reports@taluslabs.xyz) before proceeding.
+### Legal Protection
+When conducting vulnerability research according to this policy, we consider such research to be:
+
+- **Authorized** under applicable computer fraud and abuse laws
+- **Exempt** from Terms of Service restrictions that would interfere with security research
+- **Lawful and beneficial** when conducted in good faith and compliance with applicable laws
+
+### Research Scope
+This safe harbor applies to security research on:
+- **Talus Labs infrastructure** and operated services
+- **Nexus platform** and related open source software
+- **Public-facing applications** and websites operated by Talus Labs
+- **Smart contracts** deployed by Talus Labs
+
+### Good Faith Requirements
+To qualify for safe harbor protection, research must:
+- **Avoid privacy violations** and data access/modification
+- **Prevent service disruption** or data destruction
+- **Exclude social engineering** against employees or community members
+- **Provide reasonable disclosure time** before any public disclosure
+- **Comply with applicable laws** and agreements
+
+## Scope and Exclusions
+
+### In Scope
+- **Platform vulnerabilities**: Nexus protocol and infrastructure
+- **Smart contract issues**: Logic flaws, economic exploits, access control
+- **Infrastructure security**: API endpoints, authentication, data handling
+- **Dependency vulnerabilities**: Third-party library issues affecting our services
+- **Configuration issues**: Misconfigurations leading to security exposure
+
+### Out of Scope
+- **Social engineering** attacks on staff or users
+- **Physical security** of office locations
+- **Distributed denial of service (DDoS)** attacks
+- **Spam or content-based** attacks
+- **Issues in third-party** services not controlled by Talus Labs
+
+## Recognition and Rewards
+
+From time to time we may operate formal bug bounty programs. We may publish these on our web site, social media or other formal communication channels.
+
+We recognize valuable security research through:
+- **Public acknowledgment** in security advisories (with your permission)
+- **Direct communication** with our security team
+- **Community recognition** when appropriate
+- **Swag and merchandise** for significant contributions
+
+## Questions and Support
+
+For questions about this security policy or the reporting process:
+- **Email**: [security-reports@taluslabs.xyz](mailto:security-reports@taluslabs.xyz)
+- **General security discussions**: Use GitHub Discussions in relevant repositories
+
+---
+
+**Last updated**: 2025-09-22
+**Version**: 2.0
+
+*This policy is regularly reviewed and updated to reflect our evolving security practices and community needs.*
