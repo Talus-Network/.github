@@ -8,11 +8,11 @@ body:
     attributes:
       value: |
         ## Template Information
-        - **Version**: 1.2.0
-        - **Last Updated**: 2024-12-XX
-        - **Process**: [FDD-Release Framework](https://github.com/Talus-Network/.github/blob/main/docs/fdd-process.md)
+        - **Version**: 1.0.0
+        - **Last Updated**: 2025-09-23
+        - **Process**: [FDD-Release Framework](https://github.com/Talus-Network/.github/blob/main/FDD-RELEASE-FRAMEWORK.md)
 
-        All improvement proposals must follow our systematic evaluation process. See the IP Process documentation for detailed guidelines.
+        All improvement proposals must follow our systematic evaluation process. See the [IP Process](https://github.com/Talus-Network/.github/blob/main/IP-PROCESS.md) documentation for detailed guidelines.
 
   - type: textarea
     id: basic-information

@@ -9,7 +9,7 @@ body:
       value: |
         ## Feature Request Process
 
-        **Important**: Most feature requests should start as [GitHub Discussions](../../discussions) to gather community input before creating formal requests.
+        **Important**: Most feature requests should start as [GitHub Discussions](https://github.com/orgs/Talus-Network/discussions) to gather community input before creating formal requests.
 
         Use this template for:
         - Internal business-driven feature requirements
