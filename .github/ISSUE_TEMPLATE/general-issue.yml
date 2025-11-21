@@ -1,0 +1,62 @@
+name: "General Issue"
+description: "For issues that don't fit into our standard templates"
+title: "[General] [Brief description of the issue]"
+labels: ["needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## General Issue Template
+
+        Use this template for issues that don't fit into our standard templates:
+        - Unique or edge case scenarios
+        - Cross-functional issues spanning multiple categories
+        - Questions or feedback that don't match other templates
+        - Any other issue that requires a custom description
+
+        **Response Time**: General issues are triaged within 24-48 hours.
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: "Issue Description"
+      description: "Please describe your issue in detail"
+      placeholder: |
+        Provide as much detail as possible about your issue. You can structure this information in any way that makes sense for your specific situation.
+
+        Consider including:
+        - What you're trying to accomplish
+        - What's happening or not happening
+        - Any error messages or unexpected behavior
+        - Steps you've already taken
+        - What you expected to happen
+        - Any relevant context or background information
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-information
+    attributes:
+      label: "Additional Information"
+      description: "Any other relevant information"
+      placeholder: |
+        Include any other details that might help us understand and address your issue:
+        - Screenshots, logs, or links to relevant resources
+        - Environment details (if applicable)
+        - Timeline or urgency considerations
+        - Related issues or dependencies
+        - Contact information if follow-up is needed
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: general-checklist
+    attributes:
+      label: "Request Checklist"
+      description: "Please confirm you've completed these steps"
+      options:
+        - label: "I have checked that this issue doesn't fit into our standard templates"
+        - label: "I have provided a clear description of the issue"
+        - label: "I have included relevant context and background information"
+        - label: "I understand this issue will be triaged and may be reassigned to a more appropriate template"
