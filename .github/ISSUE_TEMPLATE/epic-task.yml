@@ -1,0 +1,15 @@
+name: "Feature Task"
+description: "For tasks inside features"
+title: "[Brief description]"
+assignees: []
+type: task
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Please describe the task"
+      placeholder: |
+        Provide as much detail as possible about the task. You can structure this information in any way that makes sense for your specific situation.
+    validations:
+      required: true

@@ -1,0 +1,41 @@
+name: "EPIC Feature"
+description: "For features inside an EPIC"
+title: "[Brief description]"
+assignees: []
+type: feature
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Please describe your issue in detail"
+      placeholder: |
+        Provide as much detail as possible about the feature. You can structure this information in any way that makes sense for your specific situation.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tasks
+    attributes:
+      label: "Tasks"
+      description: "Any relevant sub-tasks to complete"
+      placeholder: |
+        - [ ] Task A
+        - [ ] Task B
+        - [ ] Task C
+        - [ ] Task D
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: "Acceptance Criteria"
+      description: "Outline the specific conditions a feature must meet to be truly complete"
+      placeholder: |
+        - [ ] Criteria A
+        - [ ] Criteria B
+        - [ ] Criteria C
+        - [ ] Criteria D
+    validations:
+      required: false
